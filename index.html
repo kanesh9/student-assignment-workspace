@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Assignment Workspace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Student Assignment Workspace</h1>
+    <p>Manage your assignments easily!</p>
+
+    <form id="assignmentForm">
+      <input id="subject" placeholder="Enter subject or assignment" required>
+      <input id="deadline" type="date" required>
+      <select id="priority">
+        <option>Low</option>
+        <option selected>Medium</option>
+        <option>High</option>
+      </select>
+      <button type="submit">Add Assignment</button>
+    </form>
+
+    <h2>My Assignments</h2>
+    <div class="filters">
+      <button type="button" onclick="showAssignments('All')">All</button>
+      <button type="button" onclick="showAssignments('Pending')">Pending</button>
+      <button type="button" onclick="showAssignments('Completed')">Completed</button>
+    </div>
+
+    <div id="stats"></div>
+    <div id="assignmentList"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
